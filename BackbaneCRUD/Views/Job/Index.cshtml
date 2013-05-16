@@ -1,0 +1,49 @@
+﻿<script type="text/template" id="joblist_template">
+    <tr>
+        <td><%= Name %></td>
+        <td id="<%= Name %>Quote">$<%= Quote %></td>
+        <td><%= Sum %></td>
+        <td><a href="#start/<%= Name %>" id="<%= Name %>" >Start</a></td>
+        <td><a href="#delete/<%= Name %>" >Delete</a></td>
+        <td><a href="#edit/<%= Name %>/<%= Quote %>" >Edit</a></td>
+    </tr>
+</script>
+
+<h1>Jobs</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Quote</th>
+            <th>Total hours spent on job</th>
+        </tr>
+    </thead>
+    <tbody id="jobs">
+    </tbody>
+</table>
+<br/>
+
+<div id="editBox" style="display: none">
+    <input type="text" id="jobQuote"/>
+    <input type="hidden" id="jobId"/>
+    <button id="edit">Update</button>
+</div>
+
+<label>Job name:</label><input id="Name" type ="text"/><br/>
+<label>Job quote:</label><input id="Quote" type ="text"/><br/>
+<button id="submit">Add job</button>
+
+<script src="../../Scripts/jquery-1.7.2.js" type="text/javascript"></script>
+<script src="../../Scripts/underscore.js" type="text/javascript"></script>
+<script src="../../Scripts/backbone.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/JobModel.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/JobsCollection.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/JobView.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/JobsView.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/TimeEntry.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/JobTimeEntryView.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/TimeEntryBuilder.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/DateService.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/TimeEntryRouter.js" type="text/javascript"></script>
+<script src="../../Scripts/Code/AppView.js" type="text/javascript"></script>
